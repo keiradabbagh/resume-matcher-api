@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 from fastapi import FastAPI
 
 from app.db.session import engine
@@ -10,6 +7,7 @@ from app.api.match import router as match_router
 
 app = FastAPI(
     title="Resume Matcher API",
+    description="Scores resumes against job descriptions and tracks job applications",
     version="1.0.0"
 )
 
@@ -22,4 +20,3 @@ app.include_router(match_router)
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
->>>>>>> f9c1041 (Add resume-to-job matching with TF-IDF scoring)
