@@ -7,6 +7,7 @@ from app.api.match import router as match_router
 
 app = FastAPI(
     title="Resume Matcher API",
+    description="Scores resumes against job descriptions and tracks job applications",
     version="1.0.0"
 )
 
