@@ -1,0 +1,15 @@
+# Import FastAPI framework
+from fastapi import FastAPI
+
+# Create FastAPI app instance
+app = FastAPI(
+    title="Resume Matcher API",
+    description="Scores resumes against job descriptions and tracks job applications",
+    version="0.1.0"
+)
+
+# Health check endpoint
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
